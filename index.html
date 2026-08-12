@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Phanindra Malladi — AI Engineer · AI Team Lead</title>
-  <meta name="description" content="Phanindra Malladi is an AI engineer and AI Team Lead in Hyderabad, India. He designs and ships production AI agent systems on LangGraph and AWS. Personal portfolio." />
+  <title>Phanindra Malladi — AI Team Lead · Enterprise AI Architect</title>
+  <meta name="description" content="Phanindra Malladi is an AI Team Lead at IntelligenzIT, designing autonomous Digital FTE agent systems on LangGraph and AWS for regulated enterprises. Personal portfolio." />
   <meta name="theme-color" content="#f4f3ef" />
-  <meta property="og:title" content="Phanindra Malladi — AI Engineer" />
-  <meta property="og:description" content="AI engineer building production agent systems on LangGraph & AWS. Personal portfolio." />
+  <meta property="og:title" content="Phanindra Malladi — AI Team Lead" />
+  <meta property="og:description" content="Enterprise AI architect building autonomous Digital FTEs on LangGraph & AWS. Personal portfolio." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://phanindramalladi.online" />
   <link rel="canonical" href="https://phanindramalladi.online/" />
@@ -22,11 +22,12 @@
       --ink-soft: #3d3d3d;
       --muted: #6c6b66;
       --faint: #9c9a92;
-      --line: #e0ddD5;
-      --accent: #d6493c;      /* warm vermilion */
+      --line: #e0ddd5;
+      --accent: #d6493c;
       --accent-deep: #b3372c;
       --accent-soft: #f5e4e1;
       --green: #2f7d5b;
+      --blue: #3a6ea8;
       --white: #ffffff;
       --radius: 14px;
       --max: 1120px;
@@ -35,254 +36,132 @@
       --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
       --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
     }
-
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: calc(var(--nav-h) + 16px);
-      -webkit-text-size-adjust: 100%;
-    }
-
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 14px); -webkit-text-size-adjust: 100%; }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       *, *::before, *::after { animation: none !important; transition: none !important; }
     }
-
-    body {
-      font-family: var(--sans);
-      background: var(--paper);
-      color: var(--ink);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-    }
-
+    body { font-family: var(--sans); background: var(--paper); color: var(--ink); line-height: 1.6; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
     a { color: inherit; text-decoration: none; }
     img { max-width: 100%; display: block; }
+    .wrap { width: min(100% - 3rem, var(--max)); margin-inline: auto; }
 
-    .wrap {
-      width: min(100% - 3rem, var(--max));
-      margin-inline: auto;
-    }
-
-    /* ======= NAV ======= */
-    .nav {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      height: var(--nav-h);
-      display: flex;
-      align-items: center;
-      background: rgba(244, 243, 239, 0.85);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--line);
-    }
-    .nav .wrap {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 0.7rem;
-      font-family: var(--serif);
-      font-weight: 600;
-      font-size: 1.05rem;
-      letter-spacing: -0.02em;
-    }
-    .brand .mark {
-      width: 30px; height: 30px; border-radius: 9px;
-      background: var(--ink); color: var(--paper);
-      display: grid; place-items: center;
-      font-family: var(--serif); font-size: 0.85rem; font-weight: 600;
-    }
+    /* NAV */
+    .nav { position: sticky; top: 0; z-index: 50; height: var(--nav-h); display: flex; align-items: center; background: rgba(244,243,239,0.85); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+    .nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .brand { display: flex; align-items: center; gap: 0.7rem; font-family: var(--serif); font-weight: 600; font-size: 1.05rem; letter-spacing: -0.02em; }
+    .brand .mark { width: 30px; height: 30px; border-radius: 9px; background: var(--ink); color: var(--paper); display: grid; place-items: center; font-family: var(--serif); font-size: 0.85rem; font-weight: 600; }
     .nav-links { display: flex; align-items: center; gap: 0.15rem; }
-    .nav-links a {
-      font-size: 0.9rem; font-weight: 500; color: var(--ink-soft);
-      padding: 0.5rem 0.8rem; border-radius: 8px; transition: background .15s, color .15s;
-    }
+    .nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--ink-soft); padding: 0.5rem 0.8rem; border-radius: 8px; transition: background .15s, color .15s; }
     .nav-links a:hover { background: var(--paper-2); color: var(--ink); }
-    .nav-cta {
-      font-size: 0.9rem; font-weight: 600; color: var(--paper);
-      background: var(--ink); padding: 0.62rem 1.05rem; border-radius: 9px;
-      transition: background .15s, transform .15s;
-    }
+    .nav-cta { font-size: 0.9rem; font-weight: 600; color: var(--paper); background: var(--ink); padding: 0.62rem 1.05rem; border-radius: 9px; transition: background .15s; }
     .nav-cta:hover { background: var(--accent-deep); }
-    .menu-toggle {
-      display: none; width: 42px; height: 42px; border-radius: 9px;
-      border: 1px solid var(--line); background: var(--paper-2); color: var(--ink);
-      cursor: pointer; align-items: center; justify-content: center;
-    }
+    .menu-toggle { display: none; width: 42px; height: 42px; border-radius: 9px; border: 1px solid var(--line); background: var(--paper-2); color: var(--ink); cursor: pointer; align-items: center; justify-content: center; }
+    .drawer { display: none; position: fixed; inset: var(--nav-h) 0 auto 0; z-index: 40; background: var(--white); border-bottom: 1px solid var(--line); padding: 0.8rem 1.25rem 1.2rem; box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+    .drawer.open { display: block; }
+    .drawer a { display: block; padding: 0.85rem 0.3rem; font-size: 1rem; font-weight: 600; color: var(--ink); border-bottom: 1px solid var(--line); }
+    .drawer a:last-child { border-bottom: 0; }
 
-    /* ======= HERO ======= */
+    /* HERO */
     .hero { padding: clamp(3.5rem, 9vw, 6rem) 0 clamp(3rem, 6vw, 4.5rem); }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.35fr 1fr;
-      gap: clamp(2rem, 4vw, 4rem);
-      align-items: center;
-    }
-    .available {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      font-family: var(--mono); font-size: 0.78rem; color: var(--green);
-      background: rgba(47,125,91,0.08); padding: 0.35rem 0.7rem; border-radius: 9999px;
-      margin-bottom: 1.2rem;
-    }
-    .available .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); }
-    .hero h1 {
-      font-family: var(--serif);
-      font-size: clamp(2.4rem, 5vw, 3.6rem);
-      font-weight: 600; line-height: 1.06; letter-spacing: -0.035em;
-      margin-bottom: 1.1rem; text-wrap: balance;
-    }
-    .hero h1 .hl {
-      color: var(--accent);
-      border-bottom: 3px solid var(--accent-soft);
-    }
-    .hero p.lead {
-      font-size: clamp(1.05rem, 1.6vw, 1.18rem);
-      color: var(--ink-soft); line-height: 1.65; max-width: 34rem; margin-bottom: 1.6rem;
-    }
+    .hero-grid { display: grid; grid-template-columns: 1.45fr 1fr; gap: clamp(2rem, 4vw, 4rem); align-items: center; }
+    .statusline { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--mono); font-size: 0.78rem; color: var(--muted); margin-bottom: 1.1rem; }
+    .statusline .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); }
+    .hero h1 { font-family: var(--serif); font-size: clamp(2.3rem, 4.8vw, 3.3rem); font-weight: 600; line-height: 1.07; letter-spacing: -0.035em; margin-bottom: 0.9rem; text-wrap: balance; }
+    .hero h1 .hl { color: var(--accent); border-bottom: 3px solid var(--accent-soft); }
+    .hero .role { font-family: var(--serif); font-size: clamp(1.05rem, 1.8vw, 1.25rem); font-weight: 600; letter-spacing: -0.02em; color: var(--ink-soft); margin-bottom: 0.9rem; }
+    .hero .role .sep { color: var(--faint); font-weight: 400; margin: 0 0.35rem; }
+    .hero p.lead { font-size: clamp(1.02rem, 1.6vw, 1.14rem); color: var(--muted); line-height: 1.7; max-width: 38rem; margin-bottom: 1.7rem; }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 2rem; }
-    .btn {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      font-size: 0.95rem; font-weight: 600; line-height: 1;
-      padding: 0.85rem 1.3rem; border-radius: 10px;
-      border: 1.5px solid transparent; cursor: pointer;
-      transition: background .15s, color .15s, border-color .15s, transform .15s;
-    }
-    .btn-dark { background: var(--ink); color: var(--paper); }
-    .btn-dark:hover { background: var(--accent-deep); }
-    .btn-line { border-color: var(--line); background: var(--white); color: var(--ink); }
-    .btn-line:hover { border-color: var(--ink); }
-    .hero-meta {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
-      background: var(--line); border: 1px solid var(--line); border-radius: var(--radius);
-      overflow: hidden; max-width: 34rem;
-    }
-    .meta {
-      background: var(--white); padding: 0.9rem 1rem;
-    }
-    .meta .lbl { font-family: var(--mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: .05em; color: var(--faint); margin-bottom: .2rem; }
-    .meta .val { font-size: 0.92rem; font-weight: 600; letter-spacing: -0.01em; }
+    .btn { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.95rem; font-weight: 600; line-height: 1; padding: 0.85rem 1.3rem; border-radius: 10px; border: 1.5px solid transparent; cursor: pointer; transition: background .15s, color .15s, border-color .15s; }
+    .btn-dark { background: var(--ink); color: var(--paper); } .btn-dark:hover { background: var(--accent-deep); }
+    .btn-line { border-color: var(--line); background: var(--white); color: var(--ink); } .btn-line:hover { border-color: var(--ink); }
+    .hero-meta { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; max-width: 40rem; }
+    .meta { background: var(--white); padding: 0.85rem 1rem; }
+    .meta .lbl { font-family: var(--mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing: .05em; color: var(--faint); margin-bottom: .2rem; }
+    .meta .val { font-size: 0.9rem; font-weight: 600; letter-spacing: -0.01em; }
+    .portrait { position: relative; aspect-ratio: 4/5; border-radius: 20px; background: radial-gradient(120% 120% at 30% 20%, #fdf6ec, #efdecb), var(--paper-2); border: 1px solid var(--line); overflow: hidden; display: grid; place-items: center; }
+    .portrait .ph { font-family: var(--serif); font-weight: 600; color: rgba(26,26,26,0.55); letter-spacing: -0.03em; text-align: center; }
+    .portrait .ph .name { font-size: 2.6rem; } .portrait .ph .sub { font-size: 1rem; color: rgba(26,26,26,0.42); margin-top: .4rem; font-family: var(--sans); font-weight: 400; }
+    .portrait::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.12)); }
 
-    /* portrait card */
-    .portrait {
-      position: relative;
-      aspect-ratio: 4 / 5;
-      border-radius: 20px;
-      background:
-        radial-gradient(120% 120% at 30% 20%, #fdf6ec, #efdecb),
-        var(--paper-2);
-      border: 1px solid var(--line);
-      overflow: hidden;
-      display: grid; place-items: center;
-    }
-    .portrait .ph {
-      font-family: var(--serif); font-weight: 600;
-      color: rgba(26,26,26,0.55); letter-spacing: -0.03em;
-    }
-    .portrait .ph .name { font-size: 2.6rem; }
-    .portrait .ph .sub { font-size: 1rem; color: rgba(26,26,26,0.4); margin-top: .4rem; font-family: var(--sans); font-weight: 400; }
-    .portrait::after {
-      content: ""; position: absolute; inset: 0;
-      background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.12));
-    }
-
-    /* ======= SECTION GENERIC ======= */
+    /* SECTIONS */
     .sec { padding: clamp(3rem, 7vw, 5rem) 0; }
-    .shead { max-width: 44rem; margin-bottom: 2.2rem; }
-    .kicker {
-      font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.06em;
-      text-transform: uppercase; color: var(--accent-deep); font-weight: 500;
-      margin-bottom: 0.6rem;
-    }
-    .shead h2 {
-      font-family: var(--serif); font-weight: 600;
-      font-size: clamp(1.7rem, 3vw, 2.2rem); letter-spacing: -0.03em; line-height: 1.15;
-      margin-bottom: 0.7rem;
-    }
-    .shead p { color: var(--muted); font-size: 1.02rem; line-height: 1.65; }
-
     .alt { background: var(--paper-2); }
-
-    /* ======= ABOUT ======= */
-    .about-grid {
-      display: grid; grid-template-columns: 1.3fr 1fr; gap: 1.2rem; align-items: stretch;
-    }
-    .card {
-      background: var(--white); border: 1px solid var(--line);
-      border-radius: var(--radius); padding: 1.6rem;
-    }
+    .shead { max-width: 46rem; margin-bottom: 2.2rem; }
+    .kicker { font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-deep); font-weight: 500; margin-bottom: 0.6rem; }
+    .shead h2 { font-family: var(--serif); font-weight: 600; font-size: clamp(1.7rem, 3vw, 2.2rem); letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 0.7rem; }
+    .shead p { color: var(--muted); font-size: 1.02rem; line-height: 1.65; }
+    .card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.6rem; }
+    .about-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 1.2rem; align-items: stretch; }
     .about-copy p { font-size: 1.02rem; color: var(--ink-soft); line-height: 1.75; }
     .about-copy p + p { margin-top: 1rem; }
     .about-copy strong { color: var(--ink); font-weight: 600; }
-    .where-row {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
-      background: var(--line); border: 1px solid var(--line); border-radius: 12px; overflow: hidden;
-    }
-    .where-cell { background: var(--white); padding: 1.05rem 1.1rem; }
-    .where-cell .w-label { font-family: var(--mono); font-size: 0.7rem; text-transform: uppercase; color: var(--faint); margin-bottom: .35rem; }
-    .where-cell .w-val { font-size: 0.95rem; font-weight: 600; }
+    .facts { display: flex; flex-direction: column; justify-content: center; gap: 0.9rem; }
+    .fact { display: flex; gap: 0.9rem; align-items: flex-start; border-bottom: 1px solid var(--line); padding-bottom: 0.9rem; }
+    .fact:last-child { border-bottom: 0; padding-bottom: 0; }
+    .fact .f-label { font-family: var(--mono); font-size: 0.72rem; text-transform: uppercase; color: var(--faint); width: 100px; flex-shrink: 0; padding-top: 3px; }
+    .fact .f-val { font-size: 0.95rem; color: var(--ink-soft); line-height: 1.5; }
 
-    /* ======= SKILLS / WHAT I DO ======= */
-    .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-    .skill-card {
-      background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
-      padding: 1.4rem; transition: transform .15s, box-shadow .15s;
-    }
-    .skill-card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0,0,0,0.06); }
-    .skill-card .ic {
-      width: 42px; height: 42px; border-radius: 11px; display: grid; place-items: center;
-      background: var(--accent-soft); color: var(--accent-deep);
-      font-family: var(--serif); font-weight: 600; font-size: 1.05rem; margin-bottom: 0.9rem;
-    }
-    .skill-card h3 { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 0.4rem; }
-    .skill-card p { font-size: 0.92rem; color: var(--muted); line-height: 1.6; }
-    .skill-card .tags { margin-top: 0.9rem; display: flex; flex-wrap: wrap; gap: 0.4rem; }
-    .skill-card .tag { font-family: var(--mono); font-size: 0.72rem; color: var(--ink-soft); background: var(--paper); border: 1px solid var(--line); border-radius: 6px; padding: 0.22rem 0.5rem; }
+    /* EXPERIENCE TIMELINE */
+    .timeline { position: relative; padding-left: 1.6rem; }
+    .timeline::before { content: ""; position: absolute; left: 5px; top: 6px; bottom: 6px; width: 2px; background: var(--line); }
+    .tl-item { position: relative; padding: 0 0 2rem 1.2rem; }
+    .tl-item:last-child { padding-bottom: 0; }
+    .tl-item::before { content: ""; position: absolute; left: -1.6rem; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: var(--white); border: 3px solid var(--accent); }
+    .tl-item.wound::before { border-color: var(--faint); }
+    .tl-item.hist::before { border-color: var(--blue); }
+    .tl-when { font-family: var(--mono); font-size: 0.74rem; color: var(--faint); margin-bottom: 0.25rem; }
+    .tl-role { font-family: var(--serif); font-size: 1.15rem; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 0.2rem; }
+    .tl-where { font-size: 0.9rem; font-weight: 500; color: var(--accent-deep); margin-bottom: 0.5rem; }
+    .tl-desc { font-size: 0.95rem; color: var(--muted); line-height: 1.65; }
 
-    /* ======= PROJECTS ======= */
-    .proj-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.1rem; }
-    .proj {
-      display: flex; flex-direction: column;
-      background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
-      padding: 1.6rem; transition: transform .15s, box-shadow .15s;
-    }
-    .proj:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0,0,0,0.06); }
-    .proj .top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 0.8rem; }
-    .proj .flag { font-family: var(--mono); font-size: 0.72rem; color: var(--white); background: var(--ink); border-radius: 6px; padding: 0.22rem 0.5rem; }
-    .proj .flag.work { background: var(--accent-deep); }
-    .proj .flag.side { background: var(--green); }
-    .proj .flag.personal { background: #3a6ea8; }
-    .proj h3 { font-family: var(--serif); font-size: 1.25rem; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
-    .proj .desc { font-size: 0.95rem; color: var(--muted); line-height: 1.65; flex: 1; margin-bottom: 1.1rem; }
-    .proj .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.1rem; }
-    .proj .tag { font-family: var(--mono); font-size: 0.72rem; color: var(--ink-soft); background: var(--paper); border: 1px solid var(--line); border-radius: 6px; padding: 0.22rem 0.5rem; }
-    .proj .links { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto; }
-    .link { font-size: 0.88rem; font-weight: 600; color: var(--accent-deep); display: inline-flex; align-items: center; gap: 0.3rem; }
-    .link:hover { text-decoration: underline; }
-    .link.gh { color: var(--ink); }
+    /* SHIPS / CURRENT WORK */
+    .ships-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    .ship { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.5rem; transition: transform .15s, box-shadow .15s; }
+    .ship:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0,0,0,0.06); }
+    .ship .top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 0.65rem; }
+    .ship h3 { font-family: var(--serif); font-size: 1.18rem; font-weight: 600; letter-spacing: -0.02em; }
+    .pill { font-family: var(--mono); font-size: 0.7rem; border-radius: 6px; padding: 0.24rem 0.5rem; white-space: nowrap; }
+    .pill.work { background: var(--accent-deep); color: #fff; }
+    .pill.reg { background: var(--blue); color: #fff; }
+    .pill.build { background: var(--green); color: #fff; }
+    .pill.pers { background: var(--ink); color: var(--paper); }
+    .ship .desc { font-size: 0.94rem; color: var(--muted); line-height: 1.65; margin-bottom: 0.9rem; }
+    .ship .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .ship .tag { font-family: var(--mono); font-size: 0.72rem; color: var(--ink-soft); background: var(--paper); border: 1px solid var(--line); border-radius: 6px; padding: 0.22rem 0.5rem; }
 
-    /* ======= CONTACT ======= */
-    .contact-grid {
-      display: grid; grid-template-columns: 1.2fr 1fr; gap: 1.2rem; align-items: stretch;
-    }
-    .contact-card .big {
-      font-family: var(--serif); font-weight: 600; font-size: clamp(1.6rem, 3vw, 2rem);
-      letter-spacing: -0.03em; line-height: 1.2; margin-bottom: 0.8rem;
-    }
+    /* CAPABILITIES */
+    .caps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .cap { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.4rem; transition: transform .15s, box-shadow .15s; }
+    .cap:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0,0,0,0.06); }
+    .cap .ic { width: 42px; height: 42px; border-radius: 11px; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent-deep); font-family: var(--serif); font-weight: 600; font-size: 1.05rem; margin-bottom: 0.9rem; }
+    .cap h3 { font-family: var(--serif); font-size: 1.08rem; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 0.4rem; }
+    .cap p { font-size: 0.92rem; color: var(--muted); line-height: 1.6; }
+    .cap .tags { margin-top: 0.85rem; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .cap .tag { font-family: var(--mono); font-size: 0.72rem; color: var(--ink-soft); background: var(--paper); border: 1px solid var(--line); border-radius: 6px; padding: 0.22rem 0.5rem; }
+    .cap .ic.blue { background: #e6eef6; color: var(--blue); }
+    .cap .ic.green { background: #e4f0ea; color: var(--green); }
+    .cap .ic.bar { background: #f0e9e4; color: #8a5a33; }
+    .cap .ic.pm { background: #e3e8f2; color: #4a5a8a; }
+
+    /* ACHIEVEMENTS */
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; margin-bottom: 1.2rem; }
+    .stat { background: var(--white); padding: 1.4rem 1.2rem; }
+    .stat .num { font-family: var(--serif); font-size: 2rem; font-weight: 700; letter-spacing: -0.03em; color: var(--accent-deep); }
+    .stat .cap { font-size: 0.82rem; color: var(--muted); line-height: 1.4; margin-top: 0.3rem; }
+    .ach-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.7rem; }
+    .ach { display: flex; gap: 0.7rem; align-items: flex-start; background: var(--white); border: 1px solid var(--line); border-radius: 11px; padding: 0.95rem 1rem; font-size: 0.94rem; color: var(--ink-soft); }
+    .ach .tick { color: var(--green); font-weight: 700; flex-shrink: 0; }
+
+    /* CONTACT */
+    .contact-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 1.2rem; align-items: stretch; }
+    .contact-card .big { font-family: var(--serif); font-weight: 600; font-size: clamp(1.6rem, 3vw, 2rem); letter-spacing: -0.03em; line-height: 1.2; margin-bottom: 0.8rem; }
     .contact-card p { color: var(--muted); margin-bottom: 1.4rem; font-size: 1rem; }
+    .nonet { font-size: 0.88rem; color: var(--green); font-weight: 600; margin-top: 0.6rem; }
     .links-list { display: flex; flex-direction: column; gap: 0.5rem; }
-    .links-list a {
-      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
-      padding: 0.95rem 1.05rem; border-radius: 12px; border: 1px solid var(--line);
-      background: var(--white); min-height: 54px; transition: border-color .15s, transform .15s;
-    }
+    .links-list a { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.95rem 1.05rem; border-radius: 12px; border: 1px solid var(--line); background: var(--white); min-height: 54px; transition: border-color .15s, transform .15s; }
     .links-list a:hover { border-color: var(--ink); transform: translateX(2px); }
     .links-list .lab { display: flex; flex-direction: column; }
     .links-list .n { font-size: 0.95rem; font-weight: 600; }
@@ -295,29 +174,18 @@
     footer .d { font-family: var(--mono); font-size: 0.8rem; color: var(--faint); }
     footer .c { font-size: 0.85rem; color: var(--faint); }
 
-    /* mobile nav drawer */
-    .drawer {
-      display: none; position: fixed; inset: var(--nav-h) 0 auto 0; z-index: 40;
-      background: var(--white); border-bottom: 1px solid var(--line);
-      padding: 0.8rem 1.25rem 1.2rem; box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-    }
-    .drawer.open { display: block; }
-    .drawer a { display: block; padding: 0.85rem 0.3rem; font-size: 1rem; font-weight: 600; color: var(--ink); border-bottom: 1px solid var(--line); }
-    .drawer a:last-child { border-bottom: 0; }
-
-    @media (max-width: 880px) {
-      .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
-      .skills-grid { grid-template-columns: repeat(2, 1fr); }
-      .proj-grid { grid-template-columns: 1fr; }
-      .portrait { max-width: 360px; aspect-ratio: 4/4.3; }
+    @media (max-width: 900px) {
+      .hero-grid, .about-grid, .contact-grid, .ships-grid, .ach-list { grid-template-columns: 1fr; }
+      .caps-grid { grid-template-columns: repeat(2, 1fr); }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .portrait { max-width: 340px; }
     }
     @media (max-width: 720px) {
-      .nav-links { display: none; }
+      .nav-links, .nav-cta { display: none; }
       .menu-toggle { display: inline-flex; }
-      .nav-cta { display: none; }
-      .skills-grid { grid-template-columns: 1fr; }
-      .where-row { grid-template-columns: 1fr; }
-      .hero-meta { grid-template-columns: 1fr; }
+      .caps-grid { grid-template-columns: 1fr; }
+      .hero-meta, .stats-grid { grid-template-columns: 1fr 1fr; }
+      .fact .f-label { width: 84px; }
     }
     @media (min-width: 721px) { .drawer { display: none !important; } }
   </style>
@@ -326,13 +194,12 @@
 
   <header class="nav">
     <div class="wrap">
-      <a class="brand" href="#top">
-        <span class="mark">PM</span><span>Phanindra Malladi</span>
-      </a>
+      <a class="brand" href="#top"><span class="mark">PM</span><span>Phanindra Malladi</span></a>
       <nav class="nav-links" aria-label="Primary">
         <a href="#about">About</a>
-        <a href="#what">What I do</a>
-        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#work">Current work</a>
+        <a href="#capabilities">Capabilities</a>
         <a href="#contact">Contact</a>
       </nav>
       <a class="nav-cta" href="#contact">Let's talk</a>
@@ -343,8 +210,9 @@
   </header>
   <div class="drawer" id="drawer">
     <a href="#about">About</a>
-    <a href="#what">What I do</a>
-    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#work">Current work</a>
+    <a href="#capabilities">Capabilities</a>
     <a href="#contact">Contact</a>
   </div>
 
@@ -353,28 +221,22 @@
     <section class="hero">
       <div class="wrap hero-grid">
         <div>
-          <span class="available"><span class="dot"></span>Open to conversations</span>
-          <h1>I build AI systems that <span class="hl">actually ship</span>.</h1>
-          <p class="lead">I'm Phanindra Malladi, an AI engineer and team lead based in Hyderabad, India. I design and productionize multi-agent systems on LangGraph and AWS — the kind that solve real business problems and stay running.</p>
+          <span class="statusline"><span class="dot"></span>Enterprise AI · Hyderabad, India</span>
+          <h1>I build autonomous <span class="hl">Digital FTEs</span> — full-code agents that do real operational work.</h1>
+          <div class="role">AI Team Lead <span class="sep">·</span> transitioning to Product Owner <span class="sep">·</span> IntelligenzIT</div>
+          <p class="lead">I architect and run agent systems inside regulated enterprises — Life Sciences, IT Security, and HR — on LangGraph and AWS. Nine-plus years as a founder/operator, now leading a Digital Worker Factory that ships repeatable autonomous agents, not one-off automations.</p>
           <div class="hero-actions">
             <a class="btn btn-dark" href="#contact">Get in touch</a>
-            <a class="btn btn-line" href="https://github.com/aidendify" target="_blank" rel="noopener noreferrer">GitHub
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
+            <a class="btn btn-line" href="#work">Explore current work</a>
           </div>
           <div class="hero-meta">
             <div class="meta"><div class="lbl">Role</div><div class="val">AI Team Lead</div></div>
-            <div class="meta"><div class="lbl">Focus</div><div class="val">AI agents · LangGraph · AWS</div></div>
-            <div class="meta"><div class="lbl">Based</div><div class="val">Hyderabad, India</div></div>
-            <div class="meta"><div class="lbl">Building</div><div class="val">AIdentify (side project)</div></div>
+            <div class="meta"><div class="lbl">Stack</div><div class="val">LangGraph · AWS</div></div>
+            <div class="meta"><div class="lbl">Sectors</div><div class="val">Life Sciences · Security · HR</div></div>
           </div>
         </div>
-
         <div class="portrait" aria-hidden="true">
-          <div class="ph">
-            <div class="name">PM</div>
-            <div class="sub">Phanindra Malladi</div>
-          </div>
+          <div class="ph"><div class="name">PM</div><div class="sub">Phanindra Malladi</div></div>
         </div>
       </div>
     </section>
@@ -383,126 +245,173 @@
     <section class="sec" id="about">
       <div class="wrap">
         <div class="shead">
-          <div class="kicker">About me</div>
-          <h2>Engineer by trade, builder by instinct.</h2>
-          <p>▼ Your one-paragraph summary goes here (from the Claude fact-sheet).</p>
+          <div class="kicker">About</div>
+          <h2>Enterprise AI architect with a founder's nose for what ships.</h2>
+          <p>Where I'm from, what drives me, and the path that got me here.</p>
         </div>
         <div class="about-grid">
           <div class="card about-copy">
             <p>
-              I'm an <strong>AI engineer and team lead</strong> currently shipping an <strong>Enterprise Digital Worker Factory</strong>
-              built on <strong>LangGraph + AWS</strong> — autonomous AI agents that work as digital FTEs across
-              life sciences, security, and other industries.
+              I'm <strong>Phanindra Malladi</strong>, an AI Team Lead at IntelligenzIT in Hyderabad, India.
+              I design and deliver the <strong>Enterprise Digital Worker Factory</strong> — a productized architecture
+              that ships <strong>autonomous Digital FTEs</strong>: full-code agent systems that do real operational work
+              inside regulated businesses instead of staying stuck in demos.
             </p>
             <p>
-              My work sits where <strong>AI engineering meets product thinking</strong>: orchestrating agents for complex
-              workflows, designing structured outputs, and cutting real costs with custom automation.
+              Before enterprise AI, I spent over nine years as a <strong>founder/operator</strong> growing a SaaS product
+              to 500+ paying users. That experience shapes how I build AI today: <strong>leading with outcomes, cut
+              costs, and guardrails</strong> — not just impressive demos. I now lead a pod of engineers and interns building
+              production agents on <strong>LangGraph + AWS</strong> for Life Sciences, IT Security, and HR.
             </p>
             <p>
-              ▼ [Paste your origin story + education here — where you're from, and the journey that led you to AI.]
+              <strong>[ Origin story — where I'm from and the journey that led to AI: add 1–2 sentences. ]</strong>
             </p>
           </div>
-          <div class="card">
-            <div class="where-row">
-              <div class="where-cell"><div class="w-label">Origin</div><div class="w-val">▼ Where are you from?</div></div>
-              <div class="where-cell"><div class="w-label">Currently</div><div class="w-val">Hyderabad, India</div></div>
-              <div class="where-cell"><div class="w-label">Education</div><div class="w-val">▼ [Add degree & university]</div></div>
-              <div class="where-cell"><div class="w-label">Experience</div><div class="w-val">AI Team Lead @ IntelligenzIT</div></div>
+          <div class="card facts">
+            <div class="fact"><span class="f-label">Currently</span><span class="f-val">AI Team Lead, IntelligenzIT · Hyderabad, India</span></div>
+            <div class="fact"><span class="f-label">Education</span><span class="f-val">B.Com (Computer Science), Kakatiya University</span></div>
+            <div class="fact"><span class="f-label">Focus</span><span class="f-val">Autonomous agents · Regulated-industry AI · AWS</span></div>
+            <div class="fact"><span class="f-label">Op model</span><span class="f-val">Founder/operator → Enterprise AI architecture</span></div>
+            <div class="fact"><span class="f-label">Today</span><span class="f-val">Leading Enterprise Digital Worker Factory on LangGraph + AWS</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="sec alt" id="experience">
+      <div class="wrap">
+        <div class="shead">
+          <div class="kicker">Experience</div>
+          <h2>The path here</h2>
+          <p>Ten-plus years from voice support to leading enterprise agent systems.</p>
+        </div>
+        <div class="card">
+          <div class="timeline">
+            <div class="tl-item">
+              <div class="tl-when">Apr 2026 — present</div>
+              <div class="tl-role">AI Team Lead · Enterprise Digital Worker Factory</div>
+              <div class="tl-where">IntelligenzIT</div>
+              <div class="tl-desc">Architecting and writing production agent code — LangGraph StateGraphs, boto3 tool wrappers, and a provider-abstracted model layer (Bedrock / local LLM) via a build_chat_model() factory. Leading a pod of engineers and interns end-to-end: hiring, KRA definition, code review, and real-data verification of claimed completions. Client-facing solution scoping and live demos.</div>
+            </div>
+            <div class="tl-item hist">
+              <div class="tl-when">May 2016 — May 2026</div>
+              <div class="tl-role">Founder · AscendSaaS</div>
+              <div class="tl-where">SaaS growth & marketing product</div>
+              <div class="tl-desc">Built and grew a SaaS growth/marketing product to 500+ paying users over a ten-year run. Wound down to go all-in on enterprise AI.</div>
+            </div>
+            <div class="tl-item hist">
+              <div class="tl-when">2012 — 2015</div>
+              <div class="tl-role">Voice Support Officer</div>
+              <div class="tl-where">Knoah Solutions</div>
+              <div class="tl-desc">Started in client support — the foundation of the customer-first instincts I carry into product and AI delivery today.</div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- WHAT I DO -->
-    <section class="sec alt" id="what">
+    <!-- CURRENT WORK / SHIPS -->
+    <section class="sec" id="work">
       <div class="wrap">
         <div class="shead">
-          <div class="kicker">What I do</div>
-          <h2>Where I add value</h2>
-          <p>Hands-on engineering and team leadership across the agent lifecycle.</p>
+          <div class="kicker">Current work</div>
+          <h2>Things I own and ship</h2>
+          <p>Real systems and frameworks from the Digital Worker Factory — the details I'm building day-to-day.</p>
         </div>
-        <div class="skills-grid">
-          <div class="skill-card">
-            <div class="ic">01</div>
-            <h3>AI agent systems</h3>
-            <p>Designing and orchestrating multi-agent workflows with LangGraph — complex, stateful, production-grade.</p>
-            <div class="tags"><span class="tag">LangGraph</span><span class="tag">Agentic workflows</span><span class="tag">Structured output</span></div>
+        <div class="ships-grid">
+          <div class="ship">
+            <div class="top"><h3>Chandra — Digital Cloud Engineer agent</h3><span class="pill reg">Regulated AI</span></div>
+            <div class="desc">A production agent covering 5 key result areas — cost, security, compliance, performance, reliability. Success bar: ≥80% recall on seeded misconfigurations. Delivered PoC end-to-end and demoed live to an enterprise client.</div>
+            <div class="tags"><span class="tag">LangGraph</span><span class="tag">AWS</span><span class="tag">Cloud ops</span><span class="tag">PoC → prod</span></div>
           </div>
-          <div class="skill-card">
-            <div class="ic">02</div>
-            <h3>Cloud & data engineering</h3>
-            <p>Building and scaling infrastructure on AWS to run AI systems reliably and cost-effectively.</p>
-            <div class="tags"><span class="tag">AWS</span><span class="tag">Orchestration</span><span class="tag">Optimization</span></div>
+          <div class="ship">
+            <div class="top"><h3>DPI-LS — Digital Worker scoring framework</h3><span class="pill work">Enterprise</span></div>
+            <div class="desc">A 0–100 scoring engine that rates Digital Workers across 7 dimensions — productivity, quality, execution, governance, risk, validation, cost. 276 passing tests with config-driven weights.</div>
+            <div class="tags"><span class="tag">Evaluation</span><span class="tag">276 tests</span><span class="tag">Config-driven</span></div>
           </div>
-          <div class="skill-card">
-            <div class="ic">03</div>
-            <h3>Leading AI teams</h3>
-            <p>Leading engineers building the Enterprise Digital Worker Factory — shipping autonomous digital FTEs for life sciences, security, and more.</p>
-            <div class="tags"><span class="tag">Team lead</span><span class="tag">Roadmap</span><span class="tag">Production</span></div>
+          <div class="ship">
+            <div class="top"><h3>Productized agent architecture</h3><span class="pill work">Factory</span></div>
+            <div class="desc">Core → vertical → client template → agent. A repeatable pipeline for shipping autonomous agents across clients and industries instead of building one-off automations.</div>
+            <div class="tags"><span class="tag">Architecture</span><span class="tag">Repeatable</span><span class="tag">Multi-tenant</span></div>
           </div>
-          <div class="skill-card">
-            <div class="ic">04</div>
-            <h3>Automation with results</h3>
-            <p>Custom automation that moves real metrics — like a route-optimization agent that cut operating costs 23%.</p>
-            <div class="tags"><span class="tag">ROI</span><span class="tag">Workflow automation</span><span class="tag">n8n</span></div>
-          </div>
-          <div class="skill-card">
-            <div class="ic">05</div>
-            <h3>Enterprise adoption</h3>
-            <p>Helping enterprises adopt AI thoughtfully — multi-agent orchestration, structured outputs, and guardrails.</p>
-            <div class="tags"><span class="tag">Adoption</span><span class="tag">Governance</span><span class="tag">Guardrails</span></div>
-          </div>
-          <div class="skill-card">
-            <div class="ic">06</div>
-            <h3>Product thinking</h3>
-            <p>Background as an AI product manager — bridging what's technically possible with what users actually need.</p>
-            <div class="tags"><span class="tag">AI PM</span><span class="tag">Strategy</span><span class="tag">Delivery</span></div>
+          <div class="ship">
+            <div class="top"><h3>Multi-industry delivery</h3><span class="pill pers">Coverage</span></div>
+            <div class="desc">Delivering across Life Sciences, agri/industrial, and European mobility in the first months as AI Team Lead.</div>
+            <div class="tags"><span class="tag">Top-20 pharma</span><span class="tag">European mobility OEM</span><span class="tag">Agri-industrial</span></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section class="sec" id="projects">
+    <!-- CAPABILITIES -->
+    <section class="sec alt" id="capabilities">
       <div class="wrap">
         <div class="shead">
-          <div class="kicker">Projects & notes</div>
-          <h2>Things I've built and written</h2>
-          <p>Selected work and explorations — engineering, automation, and building in public.</p>
+          <div class="kicker">Capabilities</div>
+          <h2>What I can do for you</h2>
+          <p>From agent architecture to regulated-industry AI and product ownership.</p>
         </div>
-        <div class="proj-grid">
-          <article class="proj">
-            <div class="top"><span class="flag work">At work</span></div>
-            <h3>Enterprise Digital Worker Factory</h3>
-            <p class="desc">Leading the build of autonomous "Digital FTE" agents on LangGraph + AWS — deployed for life sciences, security, and other industries.</p>
-            <div class="tags"><span class="tag">LangGraph</span><span class="tag">AWS</span><span class="tag">Team lead</span></div>
-            <div class="links"><span class="link gh">Confidential · IntelligenzIT</span></div>
-          </article>
+        <div class="caps-grid">
+          <div class="cap">
+            <div class="ic">01</div>
+            <h3>Autonomous agent systems</h3>
+            <p>LangGraph architecture, multi-agent orchestration, and tool design for full-code production agents.</p>
+            <div class="tags"><span class="tag">LangGraph</span><span class="tag">Multi-agent</span><span class="tag">Tools</span></div>
+          </div>
+          <div class="cap">
+            <div class="ic blue">02</div>
+            <h3>AWS-native AI infrastructure</h3>
+            <p>Bedrock, RDS, S3, IAM, Terraform — including air-gapped and local-LLM deployments for sensitive environments.</p>
+            <div class="tags"><span class="tag">AWS</span><span class="tag">Terraform</span><span class="tag">Air-gap</span></div>
+          </div>
+          <div class="cap">
+            <div class="ic green">03</div>
+            <h3>Agent evaluation frameworks</h3>
+            <p>Recall harnesses, scoring engines, and performance indices designed for regulated environments (DPI-LS).</p>
+            <div class="tags"><span class="tag">Evaluation</span><span class="tag">Scoring</span><span class="tag">Guardrails</span></div>
+          </div>
+          <div class="cap">
+            <div class="ic bar">04</div>
+            <h3>Regulated-industry AI</h3>
+            <p>Life Sciences (GxP-aware), IT Security, and HR — where correctness, governance, and auditability are non-negotiable.</p>
+            <div class="tags"><span class="tag">GxP</span><span class="tag">Life Sciences</span><span class="tag">Security</span></div>
+          </div>
+          <div class="cap">
+            <div class="ic pm">05</div>
+            <h3>AI product ownership</h3>
+            <p>Roadmaps, KRA definition, pod leadership, live demos, and client delivery — steering build to outcome.</p>
+            <div class="tags"><span class="tag">Product</span><span class="tag">Pod lead</span><span class="tag">Delivery</span></div>
+          </div>
+          <div class="cap">
+            <div class="ic">06</div>
+            <h3>SaaS product & growth</h3>
+            <p>Ten years growing software to 500+ paying users — product sense that informs how I build AI for real users.</p>
+            <div class="tags"><span class="tag">SaaS</span><span class="tag">Growth</span><span class="tag">0→500+</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <article class="proj">
-            <div class="top"><span class="flag side">Side project</span></div>
-            <h3>AIdentify</h3>
-            <p class="desc">A personal project exploring how AI agents can research, build, and iterate on digital products — orchestration, quality gates, and kaizen loops. Built and shared openly.</p>
-            <div class="tags"><span class="tag">Agents</span><span class="tag">Orchestration</span><span class="tag">Building in public</span></div>
-            <div class="links"><a class="link gh" href="https://github.com/aidendify" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a class="link" href="https://x.com/xAidentify" target="_blank" rel="noopener noreferrer">@xAidentify ↗</a></div>
-          </article>
-
-          <article class="proj">
-            <div class="top"><span class="flag side">Side project</span></div>
-            <h3>Support Triage Agents</h3>
-            <p class="desc">A ready-to-run multi-agent starter for classifying, drafting, and routing support tickets — skills, taxonomy, macros, and worked examples.</p>
-            <div class="tags"><span class="tag">Multi-agent</span><span class="tag">Skills</span><span class="tag">Open source</span></div>
-            <div class="links"><a class="link gh" href="https://github.com/aidendify/aidentify-support-triage-agents" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
-          </article>
-
-          <article class="proj">
-            <div class="top"><span class="flag personal">Writing</span></div>
-            <h3>Notes on building AI agents</h3>
-            <p class="desc">Lessons from shipping production agents — multi-agent orchestration, structured outputs, enterprise agentic workflows, and cutting costs with custom automation.</p>
-            <div class="tags"><span class="tag">LangGraph</span><span class="tag">n8n</span><span class="tag">Lessons</span></div>
-            <div class="links"><a class="link" href="https://www.linkedin.com/in/srinivasphanindra" target="_blank" rel="noopener noreferrer">Read on LinkedIn ↗</a></div>
-          </article>
+    <!-- ACHIEVEMENTS -->
+    <section class="sec" id="achievements">
+      <div class="wrap">
+        <div class="shead">
+          <div class="kicker">Track record</div>
+          <h2>Results and highlights</h2>
+          <p>Numbers and wins I'm proud to stand behind.</p>
+        </div>
+        <div class="stats-grid">
+          <div class="stat"><div class="num">500+</div><div class="cap">Paying users at AscendSaaS across a 10-year run</div></div>
+          <div class="stat"><div class="num">≥80%</div><div class="cap">Recall success bar on Chandra misconfiguration detection</div></div>
+          <div class="stat"><div class="num">276</div><div class="cap">Passing tests on the DPI-LS scoring engine</div></div>
+          <div class="stat"><div class="num">7</div><div class="cap">Dimensions in the Digital Worker scoring framework</div></div>
+        </div>
+        <div class="ach-list">
+          <div class="ach"><span class="tick">✓</span>Delivered a Chandra PoC end-to-end and demoed it live to an enterprise Life Sciences client.</div>
+          <div class="ach"><span class="tick">✓</span>Built the DPI-LS scoring engine — 276 passing tests, config-driven weights, 7 dimensions wired.</div>
+          <div class="ach"><span class="tick">✓</span>Multi-client delivery in the first months: Life Sciences, agri/industrial, and European mobility.</div>
+          <div class="ach"><span class="tick">✓</span>Grew a SaaS product to 500+ paying users before moving all-in on enterprise AI.</div>
         </div>
       </div>
     </section>
@@ -513,24 +422,17 @@
         <div class="contact-grid">
           <div class="card contact-card">
             <div class="kicker">Contact</div>
-            <div class="big">Have an AI build in mind, or want to talk agents?</div>
-            <p>Whether it's a hard problem to solve, a system to build, or a conversation about agent engineering — I'm happy to connect.</p>
-            <div class="hero-actions" style="margin-bottom:0">
-              <a class="btn btn-dark" href="https://www.linkedin.com/in/srinivasphanindra" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              <a class="btn btn-line" href="mailto:hello@phanindramalladi.online">Email</a>
+            <div class="big">Have an enterprise AI build in mind, or want to talk autonomous agents?</div>
+            <p>Open to conversations about AI architecture, regulated-industry agents, and product ownership. Best reached by email or the channels below.</p>
+            <div class="hero-actions">
+              <a class="btn btn-dark" href="mailto:hello@phanindramalladi.online">Email me</a>
+              <a class="btn btn-line" href="https://www.linkedin.com/in/srinivasphanindra" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </div>
+            <div class="nonet">Your personal GitHub / X handles aren't linked yet — tell me and I'll add them.</div>
           </div>
           <div class="links-list">
             <a href="https://www.linkedin.com/in/srinivasphanindra" target="_blank" rel="noopener noreferrer">
               <span class="lab"><span class="n">LinkedIn</span><span class="h">in/srinivasphanindra</span></span>
-              <span class="arr">→</span>
-            </a>
-            <a href="https://x.com/malladiphani" target="_blank" rel="noopener noreferrer">
-              <span class="lab"><span class="n">X / Twitter</span><span class="h">@malladiphani</span></span>
-              <span class="arr">→</span>
-            </a>
-            <a href="https://github.com/aidendify" target="_blank" rel="noopener noreferrer">
-              <span class="lab"><span class="n">GitHub</span><span class="h">github.com/aidendify</span></span>
               <span class="arr">→</span>
             </a>
             <a href="mailto:hello@phanindramalladi.online">
@@ -552,14 +454,9 @@
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
-
     const btn = document.getElementById("menu-btn");
     const drawer = document.getElementById("drawer");
-    function set(open){
-      btn.setAttribute("aria-expanded", String(open));
-      btn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
-      drawer.classList.toggle("open", open);
-    }
+    function set(o){ btn.setAttribute("aria-expanded", String(o)); btn.setAttribute("aria-label", o ? "Close menu" : "Open menu"); drawer.classList.toggle("open", o); }
     btn.addEventListener("click", () => set(btn.getAttribute("aria-expanded") !== "true"));
     drawer.querySelectorAll("a").forEach(a => a.addEventListener("click", () => set(false)));
     document.addEventListener("keydown", e => { if(e.key === "Escape") set(false); });
